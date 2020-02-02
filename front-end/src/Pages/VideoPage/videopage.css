@@ -1,0 +1,61 @@
+.inputBar {
+  width: 650px;
+  height: 30px;
+  font-size: 18px;
+}
+.videoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+
+.videoPage {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.videoPlayer {
+  border-bottom: 1px solid lightgray;
+  width: 900px;
+  padding-bottom: 40px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 20px;
+}
+
+button {
+  margin-left: -580px;
+  height: 40px;
+  width: 80px;
+  border-radius: 5px;
+  color: white;
+  background-color: #347cfb;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+ul {
+  margin-left: -650px;
+  text-align: left;
+}
+
+li {
+  list-style: none;
+  padding-left: 45%;
+}
+.comment {
+  margin-left: -2px;
+}
+.comments {
+  display: inline;
+}
+
+.username {
+  font-size: 25px;
+}
