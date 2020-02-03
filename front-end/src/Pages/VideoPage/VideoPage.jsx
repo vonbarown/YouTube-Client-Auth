@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import VideoPlayer from '../../Components/Video';
+import { connect } from 'react-redux'
+import { addComments } from '../../Store/actions/videoActions'
 import './videopage.css'
 
 const VideoPage = (props) => {
 
     const [name, setName] = useState('')
     const [comment, setComment] = useState('')
-    const [videoInfo, setVideoInfo] = useState([])
+    // const [videoInfo, setVideoInfo] = useState([])
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const newItem = { name, comment };
-        setVideoInfo([...videoInfo, newItem])
+        // setVideoInfo([...videoInfo, newItem])
+        props.addComments(newItem)
     };
 
 
@@ -37,7 +40,7 @@ const VideoPage = (props) => {
                 <div className='comments'>
                     <ul>
                         {
-                            videoInfo.map(el => {
+                            props.comments.map(el => {
                                 return (
                                     <li>
                                         <p className='username'>{el.name}</p>
@@ -54,4 +57,16 @@ const VideoPage = (props) => {
     )
 }
 
-export default VideoPage
+const mapStateToProps = (state) => {
+    return {
+        comments: state.videoReducer.comments
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addComments: data => dispatch(addComments(data)),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(VideoPage)

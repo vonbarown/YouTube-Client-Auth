@@ -20,11 +20,6 @@ const Search = (props) => {
         }
     }
 
-
-    // useEffect(() => {
-    //     searchVideo()
-    // })
-
     return (
         <div className='search' >
 
