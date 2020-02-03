@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoginForm = ({ username, password, handleChange, loginUser }) => {
+export const LoginForm = ({ username, password, handleChange, loginUser }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -30,5 +30,3 @@ const LoginForm = ({ username, password, handleChange, loginUser }) => {
         </div>
     )
 }
-
-export default LoginForm;
