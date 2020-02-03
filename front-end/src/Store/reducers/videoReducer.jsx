@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
 
     switch (action.type) {
         case RECEIVE_VIDEOS:
-            stateCopy.films = action.payload
+            stateCopy.videos = action.payload
             break
         case ADD_COMMENTS:
             stateCopy.comments = [...stateCopy.comments, action.payload]
