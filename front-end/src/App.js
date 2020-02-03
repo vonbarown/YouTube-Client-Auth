@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom'
 import { Navbar } from './Components/NavBar';
+import { PrivateRoute } from './Components/PrivateRoute'
+import { Profile } from './Pages/Profile/Profile'
 import AuthContainer from './containers/authContainer'
 import VideoPage from './Pages/VideoPage/VideoPage'
 import Search from './Pages/Search/SearchPage'
@@ -58,7 +60,8 @@ class App extends Component {
           <Route path='/signup' render={this.renderAuthContainer} />
           <Route path='/video/:id' component={VideoPage} />
           <Route path='/about' component={About} />
-          <Route path='/search' component={Search} />
+          <PrivateRoute path='/search' component={Search} isUserLoggedIn={this.state.isUserLoggedIn} />
+          <PrivateRoute path='/profile' component={Profile} isUserLoggedIn={this.state.isUserLoggedIn} />
           <Route path='/' component={Home} />
         </Switch>
       </div>
