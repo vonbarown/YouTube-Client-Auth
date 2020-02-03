@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom'
-import HomePage from './Pages/Home/Homepage'
 import { Navbar } from './Components/NavBar';
+import AuthContainer from './containers/authContainer'
 import VideoPage from './Pages/VideoPage/VideoPage'
+import Search from './Pages/Search/SearchPage'
+import { Home } from './Pages/Home/Homepage'
 import About from './Pages/About'
 import axios from 'axios'
 import './App.css';
@@ -52,9 +54,12 @@ class App extends Component {
         />
 
         <Switch>
+          <Route path='/login' render={this.renderAuthContainer} />
+          <Route path='/signup' render={this.renderAuthContainer} />
           <Route path='/video/:id' component={VideoPage} />
           <Route path='/about' component={About} />
-          <Route path='/' component={HomePage} />
+          <Route path='/search' component={Search} />
+          <Route path='/' component={Home} />
         </Switch>
       </div>
     );

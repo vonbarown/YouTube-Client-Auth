@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import LoginForm from '../Components/LoginForm'
-import SignupForm from '../Components/SigngupForm'
+import { LoginForm } from '../Components/LoginForm'
+import { SignupForm } from '../Components/SignupForm'
 import axios from 'axios'
 
 class AuthContainer extends Component {
