@@ -4,8 +4,6 @@ const userQueries = require('../db/queries/users')
 const { loginRequired } = require('../auth/helpers')
 
 router.get('/', loginRequired, async (req, res, next) => {
-  console.log(req.session);
-
   try {
     let users = await userQueries.getAllUsers()
     res.json({
