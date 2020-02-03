@@ -1,0 +1,1 @@
+export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS'
