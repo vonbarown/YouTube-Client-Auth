@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { apiKey } from '../../secrets'
+import { apiKey } from '../../secret'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import './SearchPage.css'
