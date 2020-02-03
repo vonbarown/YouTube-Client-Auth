@@ -1,11 +1,9 @@
 const db = require('../db')
 
 /* GET users listing. */
-const getAllUsers = async () => {
-    let users = await db.any('SELECT id,username FROM users ')
+const getAllUsers = async () => await db.any('SELECT id,username FROM users ')
 
-    return users
-}
+
 
 const addNewUser = async (user) => {
     const newUserQuery = "INSERT INTO users(username,password_digest) VALUES($1,$2) RETURNING username"
