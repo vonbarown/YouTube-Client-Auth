@@ -1,1 +1,2 @@
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS'
+export const ADD_COMMENTS = 'ADD_COMMENTS'

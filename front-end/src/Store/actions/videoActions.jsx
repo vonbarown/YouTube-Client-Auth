@@ -1,9 +1,9 @@
 
-import { RECEIVE_FILMS, ADD_COMMENTS } from "./actionsTypes";
+import { RECEIVE_VIDEOS, ADD_COMMENTS } from "./actionTypes";
 
-export const receiveFilms = (payload) => {
+export const receiveVideos = (payload) => {
     return {
-        type: RECEIVE_FILMS,
+        type: RECEIVE_VIDEOS,
         payload
     };
 };
