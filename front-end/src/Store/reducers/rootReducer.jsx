@@ -1,11 +1,9 @@
-import count from "./count";
-import filmReducer from './filmsReducer'
+import videoReducer from './videoReducer'
 
 import { combineReducers } from "redux";
 
-export default combineReducers(
+export const rootReducer = combineReducers(
     {
-        counterState: count,
-        filmState: filmReducer
+        videoReducer
     }
 );
